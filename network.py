@@ -7,7 +7,7 @@ class Network(object):
         self.num_layers = len(sizes)
         self.sizes = sizes
         self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
-        # if W = layer n, Wjk ( self.weights[n][j][k] )
-        # is the weight for the connection between the kth neuron in the nth layer and the jth neuron in the (n+1)th layer
+        # if W := weights of layer n ( self.weights[n] ), then:
+        # Wjk ( self.weights[n][j][k] ) is the weight for the connection between the kth neuron in the nth layer and the jth neuron in the (n+1)th layer
         self.weights = [np.random.randn(y,x)
                         for x, y in zip(sizes[:-1], sizes[1:])]
