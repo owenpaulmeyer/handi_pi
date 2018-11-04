@@ -1,2 +1,2 @@
 # handi_pi
-# with some digits
+# with some digits and fingers
